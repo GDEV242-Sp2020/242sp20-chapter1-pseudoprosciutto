@@ -2,9 +2,14 @@ import java.awt.*;
 
 /**
  * A triangle that can be manipulated and that draws itself on a canvas.
+ * This has been edited to allow more color possibilities and 
+ * new method setPosition - allows user to set placement of object without
+ * needing to move object in incremental steps .
+ * new mehtod setAll - puts all fields in one method for quick editing.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * @author Matthew Sheehan
+ * @originalAuthor  Michael Kšlling and David J. Barnes
+ * @version 2020.02.02
  */
 
 public class Triangle
@@ -46,6 +51,31 @@ public class Triangle
         erase();
         isVisible = false;
     }
+    
+        /**
+     *  Set Position inputing location for x and y
+     */
+    public void setPosition(int x, int y)
+    {
+        erase();
+        xPosition = x;
+        yPosition = y;
+        draw();
+    }
+    
+    /**
+     *  Set Color, Height, Width, x, y, Position using inputs 
+     */
+    public void setAll(String newColor,int newHeight, int newWidth ,int x, int y)
+    {
+        erase();
+        color = newColor;
+        height = newHeight;
+        width = newWidth;
+        xPosition = x;
+        yPosition = y;
+        draw();
+    }    
     
     /**
      * Move the triangle a few pixels to the right.
@@ -175,7 +205,7 @@ public class Triangle
     {
         if(isVisible) {
             Canvas canvas = Canvas.getCanvas();
-            int[] xpoints = { xPosition, xPosition + (width/2), xPosition - (width/2) };
+            int[] xpoints = { xPosition, xPosition + (width/2), xPosition};
             int[] ypoints = { yPosition, yPosition + height, yPosition + height };
             canvas.draw(this, color, new Polygon(xpoints, ypoints, 3));
             canvas.wait(10);
