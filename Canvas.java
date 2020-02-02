@@ -4,12 +4,18 @@ import java.util.List;
 import java.util.*;
 
 /**
+ * 
  * Canvas is a class to allow for simple graphical drawing on a canvas.
  * This is a modification of the general purpose Canvas, specially made for
  * the BlueJ "shapes" example. 
+ * 
+ * This was altered very slightly to add some new color choices. 
+ * The starting canvas color has also been changed to a light blue.
  *
- * @author: Bruce Quig
- * @author: Michael Kšlling (mik)
+ * @author: Matthew Sheehan
+ * 
+ * @original author: Bruce Quig
+ * @original author: Michael Kšlling (mik)
  *
  * @version 2016.02.29
  */
@@ -29,7 +35,7 @@ public class Canvas
     {
         if(canvasSingleton == null) {
             canvasSingleton = new Canvas("BlueJ Picture Demo", 500, 300, 
-                                         Color.white);
+                                         new Color(216, 241, 255));
         }
         canvasSingleton.setVisible(true);
         return canvasSingleton;
@@ -127,6 +133,17 @@ public class Canvas
         }
         else if(colorString.equals("black")) {
             graphic.setColor(Color.black);
+        }
+        else if(colorString.equals("sky")) {
+            graphic.setColor(new Color(216, 241, 255));
+        }
+        
+        else if(colorString.equals("window")) {
+            graphic.setColor(new Color(209, 209, 209));
+        }
+        
+        else if(colorString.equals("ground")) {
+            graphic.setColor(new Color(195, 223, 194));
         }
         else if(colorString.equals("blue")) {
             graphic.setColor(new Color(30, 75, 220));
