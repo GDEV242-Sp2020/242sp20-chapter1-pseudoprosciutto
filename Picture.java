@@ -15,6 +15,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Person person;
     private boolean drawn;
 
     /**
@@ -26,6 +27,7 @@ public class Picture
         window = new Square();
         roof = new Triangle();  
         sun = new Circle();
+        person = new Person();
         drawn = false;
     }
 
@@ -57,6 +59,7 @@ public class Picture
             sun.moveVertical(-40);
             sun.changeSize(80);
             sun.makeVisible();
+           
             drawn = true;
         }
     }
@@ -82,4 +85,25 @@ public class Picture
         roof.changeColor("green");
         sun.changeColor("yellow");
     }
+    
+    /**
+     * Create a sunset - moves sun vertically down off the screen.
+     */
+    public void sunset()
+    {
+        sun.slowMoveVertical(300);
+        comeHome(); //Person walks up to house after sunset
+    }
+    
+    /**
+     * Person walks up to house
+     */
+    public void comeHome()
+    {          
+        person.moveHorizontal(-50);
+        person.moveVertical(140);
+        person.makeVisible();
+        person.slowMoveVertical(-100);
+    }
+        
 }
