@@ -9,7 +9,7 @@ import java.util.*;
  * This is a modification of the general purpose Canvas, specially made for
  * the BlueJ "shapes" example. 
  * 
- * This was altered very slightly to add some new color choices. 
+ * This was altered very slightly to add color choices (sky, ground, window) 
  * The starting canvas color has also been changed to a light blue.
  *
  * @author: Matthew Sheehan
@@ -123,6 +123,7 @@ public class Canvas
     }
 
     /**
+     * new colors have been added: sky, ground, and window.
      * Set the foreground color of the Canvas.
      * @param  newColor   the new color for the foreground of the Canvas 
      */
