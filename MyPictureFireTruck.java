@@ -1,5 +1,8 @@
 /**
  * This class represents a simple picture of a Firetruck and a fireman.
+ * After Drawing with draw(); the picture there are two methods to animate.
+ * driveAway() - First the Fire truck drives away off screen
+ * runAfterVehicle() - the firefighter runs off screen chasing
  * 
  * You can set it to black-and-white display and back to colors.
  *
@@ -61,11 +64,11 @@ public class MyPictureFireTruck
             truck1.makeVisible();
             
             truck2.changeSize(80);
-            truck2.moveHorizontal(-60);
+            truck2.moveHorizontal(-80);
             truck2.makeVisible();
             
             truck3.changeSize(80);
-            truck3.moveHorizontal(-120);
+            truck3.moveHorizontal(-160);
             truck3.makeVisible();
 
             truck4.setAll("red", 30, 380, 170);
@@ -83,7 +86,7 @@ public class MyPictureFireTruck
             wheelFront.setAll("black",40,340,175);
             wheelFront.makeVisible();
             
-            person.setAll("black",60,30,160,190);
+            person.setAll("black",60,30,130,190);
             person.makeVisible();
             drawn = true;
         }
@@ -125,5 +128,31 @@ public class MyPictureFireTruck
         person.changeColor("black");
     }
     
+        public void driveAway()
+    {
+        int delta = 20;
+
+        for(int i = 0; i < 18; i++)
+        {
+        
+        truck1.moveHorizontal(delta);
+        truck2.moveHorizontal(delta);
+        truck3.moveHorizontal(delta);
+        truck4.moveHorizontal(delta);
+        window1.moveHorizontal(delta);
+        window2.moveHorizontal(delta);
+        wheelBack.moveHorizontal(delta);
+        wheelFront.moveHorizontal(delta);
+        }
+    }
+    public void runAfterVehicle()
+    {
+                int delta = 3;
+
+        for(int i = 0; i < 130; i++)
+        {
+        person.moveHorizontal(delta);
+        }
+    }
  
 }
