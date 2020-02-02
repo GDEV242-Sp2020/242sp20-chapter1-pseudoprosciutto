@@ -1,6 +1,8 @@
 import java.awt.*;
 
 /**
+ * This triangle is now a right angle triangle with its corner bottom left
+ * 
  * A triangle that can be manipulated and that draws itself on a canvas.
  * This has been edited to allow more color possibilities and 
  * new method setPosition - allows user to set placement of object without
