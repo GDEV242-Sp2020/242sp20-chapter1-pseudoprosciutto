@@ -1,13 +1,13 @@
 /**
- * This class represents a simple picture. You can draw the picture using
- * the draw method. But wait, there's more: being an electronic picture, it
- * can be changed. You can set it to black-and-white display and back to
- * colors (only after it's been drawn, of course).
- *
- * This class was written as an early example for teaching Java with BlueJ.
+ * This class represents a simple picture.
  * 
- * @author  Michael Kšlling and David J. Barnes
- * @version 2016.02.29
+ * You can set it to black-and-white display and back to colors.
+ *
+ * This class was adapted to draw my own image 
+ * using code originating from Michael Kšlling and David J. Barnes
+ * 
+ * @author Matthew Sheehan
+ * @version 2020.02.02
  */
 public class Picture
 {
